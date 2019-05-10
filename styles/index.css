@@ -1,52 +1,95 @@
-.item {
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 50px 0;
+  font-family: 'Modak', cursive;
+}
+
+h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin: 50px 0;
+  /* font-family: serif; */
+  /* font-family: sans-serif; */
+  /* font-family: monospace; */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+}
+
+
+.container {
+  display: flex;
+}
+
+.container .item {
   width: 50px;
   height: 50px;
-  background: gray;
+  background-size: cover;
+  background: lightgray;
   border: 1px solid black;
-  color: white;
+  /* margin: 20px; */
 }
 
-.container2 .item {
-  background: teal;
-}
 
-.container3 .item {
-  background: orange;
-}
-
-.container4 .item {
-  background: purple;
-}
 
 /* Start Here */
 
-/* When you display: flex; your items will automatically go horizontal.  Keep your items this way unless the directions specify otherwise. */
+/* When you display: flex; your items will automatically go horizontal.  
+Keep your items this way unless the directions specify otherwise. */
 
 /* Center all the items in container 1*/
-.container1 {
-  display: flex;
+.row-1 {
   justify-content: center;
 }
 
+
 /* Keep all the items stacked vertically. Center all the items in container 2.  */
-.container2 {
-  display: flex;
-  flex-direction: column; 
+.row-2 {
+  flex-direction: column;
   align-items: center;
- 
 }
 
 /* Reverse the order of the items.  Space each item evenly between themselves. */
-.container3 {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
+.row-3 {
+ flex-direction: row-reverse;
+ justify-content: space-evenly;
+
 }
 
-/* Give container 4 a height of 300px. Space each item so that there is equal distance around them.  Move the boxes to the bottom of your 300px height.  */
-.container4 {
-  display: flex;
+/* Give container 4 a height of 300px. Space each item 
+so that there is equal distance around them.  
+Move the boxes to the bottom of your 300px height.  */
+.row-4 {
   height: 300px;
   justify-content: space-around;
   align-items: flex-end;
 }
+
+/* Finally, make the first row's boxes gray, 
+second row teal, 
+third row orange, fourth row purple */
+.row-1 .item {
+  background-color: gray;
+}
+.row-2 .item {
+  background-color: hsl(180, 100%, 25%);
+}
+.row-3 .item {
+  background-color: rgb(255, 165, 0);
+}
+.row-4 .item {
+  background-color: #800080;
+}
+
+.item.bg-blue {
+  background-color: dodgerblue;
+}
+
+.item.bg-red {
+  background-color: indianred;
+}
+
+.item.bg-fuschia {
+  background-color: fuchsia;
+}
+
